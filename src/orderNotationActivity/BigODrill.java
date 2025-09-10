@@ -15,7 +15,9 @@ public class BigODrill {
      */
     public static int constantTime(int[] numArr) {
         //TODO: Add the code that returns the last element of the input array with O(1) run time
-        return 0; // Placeholder to make it compile. Replace me with the correct value.
+        int arrLen = numArr.length;
+        int lastElement = numArr[arrLen-1];
+        return lastElement; // Placeholder to make it compile. Replace me with the correct value.
     }
 
 
