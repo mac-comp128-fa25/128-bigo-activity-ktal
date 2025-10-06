@@ -1,5 +1,6 @@
 package orderNotationActivity;
 
+import java.util.Arrays;
 import java.util.Random;
 
 // Activity Readme can be found here:
@@ -31,6 +32,10 @@ public class BigODrill {
         //TODO: Add the code to modify and return the input array with each element squared
         // which performs in O(n)
 
+        for (int i = 0; i < numArr.length; i ++){
+            numArr[i] = numArr[i] * numArr[i];
+        }
+
         return numArr;
     }
 
@@ -41,6 +46,13 @@ public class BigODrill {
      */
     public static int[] puzzle03(int[] numArr) {
         //TODO: What does the following code do?
+            //takes in an int array, starts a count of index 2, creates a temp array the same 
+            //length as the input array, then, starting at index 1, for each index double the
+            //length from the previous, each successive index in te temp array is set to the
+            //value at that doubled index.
+
+            //for the temp array, we are indexing n times. for the input array, we index at
+            //a more complex rate, but never hit every number.
         int index2 = 0;
         int[] tempArr = new int[numArr.length];
         for(int index = 1; index < numArr.length; index = index * 2) {
@@ -82,7 +94,14 @@ public class BigODrill {
 
 
     public static void main (String[] args){
-        //TODO: Write code to run your methods
+        int[] arr = {1, 2, 3};
+
+        int lastElement = constantTime(arr);
+        System.out.println(lastElement);
+
+        linearTime(arr);
+        System.out.println(Arrays.toString(arr));
+
 
     }
 }
